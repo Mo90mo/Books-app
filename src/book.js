@@ -51,13 +51,13 @@ class Book extends Component {
 				{this.props.book.imageLinks ? 
 					(<img src={this.props.book.imageLinks.thumbnail} alt={'cover of ' + this.props.book.title} className="book-cover"/>) :
 					(<p>No picture available</p>)}
-        <h3 tabIndex='0' className="book-content">{this.props.book.title}</h3>
-        <h4 tabIndex='0' className="book-content content">{this.props.book.authors}</h4>
-        <p tabIndex='0' className="book-content content">{this.props.book.publishedDate}</p>
-        <p className="book-content content">{this.props.book.publishers}</p>
-        <InfoBox book={this.props.book} role='menu' aria-expanded='false' aria-label='more informations on the book'/>
-        <Menu id={this.props.book.id} role='menu' aria-expanded='false' aria-label='move the book to a shelf' changeShelf={this.changeShelf} selectedShelf={this.state.selectedShelf}/>
-      </div>
+        			<h3 tabIndex='0' className="book-content">{this.props.book.title}</h3>
+        			<h4 tabIndex='0' className="book-content content">{this.props.book.authors}</h4>
+       				<p tabIndex='0' className="book-content content">{this.props.book.publishedDate}</p>
+        			<p className="book-content content">{this.props.book.publishers}</p>
+        			<InfoBox book={this.props.book} role='menu' aria-expanded='false' aria-label='more informations on the book'/>
+        			<Menu id={this.props.book.id} role='menu' aria-expanded='false' aria-label='move the book to a shelf' changeShelf={this.changeShelf} selectedShelf={this.state.selectedShelf}/>
+      			</div>
 		)
 	}
 }
