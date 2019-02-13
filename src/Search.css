@@ -1,43 +1,219 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100');
-header {
-  background-color: #222;
-  height: 100px;
-  padding: 20px;
-  color: white;
+
+
+
+
+/*Search bar styling*/
+.search-bar {
+  width: 98%;
+  height: 70px;
+  background-color: #ddd8d8;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  border: 0;
+  padding-left: 2%;
 }
 
-input {
-  width: 100%;
-  height: 80px;
+input:focus {
+  outline: 2px solid #994040;
 }
 
-.booksTable {
-  width: 100%;
+
+/*page when there are no results visible*/
+.empty-page {
+  margin-top: 10%;
+  height: 500px;
+  background-color: #ddd8d8;
+  text-align: center;
+}
+.no-results {
+  padding-top: 5%;
+}
+/*results stiling*/
+.results {
+  background-color: #d5c2c2;
+  margin-top: 50px;
+  padding-top: 70px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  font-family: 'Raleway', sans-serif;
+  justify-content: space-around;
+
 }
-.book {
-  width: 25%;
-  padding: 2%;
-}
-.menu {
-  width: 30%;
-  
-}
-p {
-  font-family: 'Raleway', sans-serif;
-  font-size: 13px;
-}
+
+/*Add button and dropdown menu styling*/
+/*selection*/
+
 .dropdown-menu {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
 }
-option {
-  font-size: 12px;
-  text-align: left;
+
+.container {
+  width: 100%;
+  position: relative;
+  left: 0;
+  display: inline;
+  position: relative;
+}
+
+.select-box--arrow {
+  width: 30px;
+  /*height: 40px;*/
+  margin-left: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  background-color: #994040;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+.add-button {
+  background-color: #994040;
+  color: white;
+  height: 100%;
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  vertical-align: middle;
+  background-color: #994040;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9em;
+}
+.add-button:hover {
+  cursor: pointer;
+}
+
+.menu {
+  margin: 0;
+  background-color: #cda1a1;
+  color: white;
+  position: absolute;
+  width: 100%;
+}
+
+.menu div.selected {
+  background-color: #994040;
+}
+
+.menu div:hover {
+  background-color: #994040;
+  cursor: pointer;
+}
+
+.select-box--arrow-down {
+  position: absolute;
+  top: 7px;
+  right: 13px;
+  width: 0; 
+  height: 0; 
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.select-box--arrow-up {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  width: 0; 
+  height: 0; 
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.select-box--arrow:hover {
+  cursor: pointer;
+}
+.selected {
+  background-color: #994040;
+}
+.open-info {
+  padding-bottom: 10%;
+  color: #994040;
+}
+.open-info:hover {
+  cursor: pointer;
+}
+.closed-info-box {
+  display: none;
+}
+.info-box {
+  position: fixed;
+  padding: 1% 4% 4% 4%;
+  left: 0;
+  right: 0;
+  max-height: 400px;
+  top: 30%;
+  background-color: #eadad0;
+  z-index: 20;
+  -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow-y: auto;
+}
+.info-box>a {
+  color: black;
+}
+.informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.close-button {
+  text-align: right;
+  font-size: 10px;
+  padding-bottom: 4%;
+}
+.close {
+  width: 10px;
+  color: black;
+}
+.close-button:hover {
+  cursor: pointer;
+}
+.first-column {
+  width: 30%;
+}
+.second-column {
+  width: 50%;
+  padding: 0% 2% 0% 2%;
+}
+.link a {
+  font-size: 0.9em;
+  color: #994040;
+}
+.link {
+  padding: 2%;
+}
+@media screen and (max-width: 600px) {
+/*.info-box {
+  max-height: 700px;
+  width: 80%;
+  left: 37%;
+  margin-left: -115px;
+} */
+.informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .first-column, .second-column {
+    width: 100%;
+  }
 }
