@@ -10,5 +10,7 @@ Once a book is on a shelf, if it appears in the search results, it will be seen 
 - Copy or fork the repository
 - Open the repository in your terminal and run npm-install and npm-start
 
+You can see a demo of the app at this address: https://my-library.netlify.com/
+
 
 
