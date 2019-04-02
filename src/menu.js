@@ -11,10 +11,10 @@ class Menu extends Component {
 	}
 	//The function shows the menu
 	dropDownMenu() {
-    this.setState(prevState => ({
-      showMenu: !prevState.showMenu
-    }));
-  }
+    	this.setState(prevState => ({
+      	showMenu: !prevState.showMenu
+    	}));
+  	}
   //The function calls the changeShelf function in the parent component and closes the menu
 	handleClick(e) {
 		this.props.changeShelf(e.target.getAttribute('value'), this);
@@ -24,9 +24,9 @@ class Menu extends Component {
 	render() {
 		return(
 			<div className='dropdown-menu' list="shelves-option">
-        <div className="container">
-          <div className="selection-button">
-            <button tabIndex='0' aria-haspopup='true' aria-expanded='false' role='menu' className='add-button' onClick={this.dropDownMenu}>Move the book to a shelf</button>
+        		<div className="container">
+          			<div className="selection-button">
+            			<button tabIndex='0' aria-haspopup='true' aria-expanded='false' role='menu' className='add-button' onClick={this.dropDownMenu}>Move the book to a shelf</button>
 						<div className='select-box--arrow' onClick={this.dropDownMenu}>
 							<span className={this.state.showMenu ? 'select-box--arrow-up' : 'select-box--arrow-down'}/>
 						</div>
@@ -38,8 +38,8 @@ class Menu extends Component {
 						<option tabIndex='0' aria-selected={this.props.selectedShelf === 'none' ? 'true' : 'false'}  className={this.props.selectedShelf === 'none' ? 'selected' : ''} onClick={this.handleClick} value={'none'}>None</option>
 					</div>	
 				</div>	
-      </div>
-    )
+      		</div>
+    	)
 	}
 }
 
