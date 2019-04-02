@@ -7,7 +7,7 @@ class Book extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-      selectedShelf: 'none',  		
+      		selectedShelf: 'none',  		
 		};
 		this.changeShelf = this.changeShelf.bind(this);
 	}
