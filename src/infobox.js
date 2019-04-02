@@ -21,9 +21,9 @@ class InfoBox extends Component {
 	render() {
 		return(
 			<div className="info">
-        <button className="open-info" role='menu' aria-expanded='false' aria-label='more informations on the book' onClick={this.openBox}>More Info</button>
-          <div className={this.state.showInfoBox ? 'info-box' : 'closed-info-box'} >
-          	<div tabIndex='1' className="close-button" onClick={this.closeInfo}>Close</div>
+        		<button className="open-info" role='menu' aria-expanded='false' aria-label='more informations on the book' onClick={this.openBox}>More Info</button>
+          		<div className={this.state.showInfoBox ? 'info-box' : 'closed-info-box'} >
+          		<div tabIndex='1' className="close-button" onClick={this.closeInfo}>Close</div>
           	<div className="informations">
           		<div className="first-column">
           			{this.props.book.imageLinks ? 
